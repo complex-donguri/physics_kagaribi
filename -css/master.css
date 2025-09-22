@@ -24,7 +24,8 @@
   --font_serif: serif;
 }
 
-/* 基本 */
+
+/* #region 基本 */
 html {
   font-size: 62.5%;
   font-size: clamp(1rem, 2.5vw, 1.1rem);
@@ -75,13 +76,11 @@ img {
   margin: auto;
   position: relative;
 }
-
-
-
-
+/* #endregion */
 
 /* ヒーロー
 ================== */
+/* #region */
 .hero-container {
   height: 250px;
   display: grid;
@@ -133,6 +132,8 @@ img {
   font-size: 1rem;
   font-weight: bold;
 }
+/* #endregion */
+
 
 
 .footnote {
@@ -169,6 +170,8 @@ img {
 
 /* 各記事ページ
 =================== */
+
+/* #region タイトルセクション */
 .main {
 }
 .main section {
@@ -300,8 +303,7 @@ img {
   font-weight: normal;
   font-size: 0.9rem;
 }
-
-
+/* #endregion */
 
 .main h2 {
   margin-bottom: 1rem;
@@ -526,6 +528,7 @@ strong::after {
 
 /* リンク
 =====================*/
+/* #region */
 .link {
   color: var(--link_color);
   text-decoration: none;
@@ -556,11 +559,12 @@ strong::after {
 .link-noarrow::after {
   content: none;
 }
-
+/* #endregion */
 
 
 /* 記事カード
 ===================== */
+/* #region */
 .articlecards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -603,8 +607,11 @@ strong::after {
 .articlecard:hover img {
   transform: scale(1.2,1.2);
 }
+/* #endregion */
 
 /* @media (prefers-color-scheme: dark) */
+/* ダークモード */
+/* #region */
 @media all
 {
   body {
@@ -701,3 +708,4 @@ strong::after {
   }
 
 }
+/* #endregion */
