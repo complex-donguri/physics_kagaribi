@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="ja">
-<head><title>[title] | Risulogy</title>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="/-css/master.css">
   <script defer src="/-js/head.js"></script>
 
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
-
-  <!-- katex -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+  <!-- #region katex -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+  <!-- #endregion -->
+
+  <title>東京大学 2025年 | 受験物理のかがり火</title>
 </head>
 
 <body>
@@ -21,9 +19,9 @@
     <section class="title-section">
       <div class="title-pankuzu">
         <ul>
-          <li><a href="/">Risulogy</a></li>
-          <li><a href="">過去問探求</a></li>
-          <li><a href="./">東京大学 2025年度</a></li>
+          <li><a href="/">Top</a></li>
+          <li><a href="/exam/">過去問探求</a></li>
+          <li><a href="/exam/tokyo/tokyo2025/">東京大学 2025年度</a></li>
         </ul>
       </div>
       <h1>東京大学 2025 第1問 </h1>
@@ -32,9 +30,13 @@
 
     <!-- abstract -->
     <section>
-      ティンカートイ(※)のようにいくつかのおもりと棒を組み合わせた剛体は 〇〇 年にも出題されています。
-      〇〇 年 〇回の 東大模試（駿台？河合？）でも出た記憶。
-      剛体といっても、中身が均一に詰まった円盤や板のような単純な物体の並進・回転運動ですら、積分を使わずに高校範囲でわかるな要は限られてくるので、結局こういうふうにいくつかの点だけに質量が局在するような形の問題が多くなります[要検討]。
+      <p>
+        ティンカートイ(※)のようにいくつかのおもりと棒を組み合わせた剛体は 〇〇 年にも出題されています。
+        〇〇 年 〇回の 東大模試（駿台？河合？）でも出た記憶。
+      </p>
+      <p>
+        剛体といっても、中身が均一に詰まった円盤や板のような単純な物体の並進・回転運動ですら、積分を使わずに高校範囲でわかるな要は限られてくるので、結局こういうふうにいくつかの点だけに質量が局在するような形の問題が多くなります[要検討]。
+      </p>
 
       <div class="keys">
         <span>キーワード</span>
@@ -46,36 +48,237 @@
     </section>
 
     <section>
-      <h2>問題と解説</h2>
-      
-      <!-- 1-I-(1)(2)(3) -->
-      <div>
-        <!-- 問題画像 -->
-        <div>
-          <img src="" alt="">
-        </div>
-        <!-- 解説 -->
-        <div>
-          <p>
-            
-          </p>
-        </div>
+      <h2>思考の道すじ</h2><!-- h2タグでいいのか？ -->
+      <ul class="list">
+        <li>
+          何はともあれ、まずは <strong>かかる力をすべて図示</strong>します（※1）。
+          <!-- もちろん慣れてきたら全て書かなくても、問われていることに必要な部分だけ取り出して考えることもできるが、経験に頼るこのような方法は、かかっている力をうっかり見落とすなどのリスクをはらんでいるため、（時間に限りある試験の場でも）推奨しない。 -->
+        </li>
+        <li>
+          質点（大きさを持たない）ではなく剛体を考えているので、運動は
+          <ul class="list">
+            <li><strong>並進運動</strong>(剛体全体の、上下左右前後方向への運動) と</li>
+            <li><strong>回転運動</strong></li>
+          </ul>
+          に分けられます。これらの条件をはじめから全て書き出してしまうと見通しが良くなります（※2）。
+        </li>
+        <li>
+          高校では剛体の回転の運動方程式は扱いませんから、結局「回転していないとき」あるいは「静止摩擦力が限界を超え、回りだしてしまう瞬間」の状況さえわかれば良いのです。
+        </li>
+        <li>
+          私たちは剛体が<strong>並進運動していないとき</strong>のモーメントの釣り合いしか知らないのに、IIIでは物体自体が並進運動しています。仕方がないので、<strong>物体に固定した座標系で考える</strong>ことで、モーメントを議論することができます。
+        </li>
+        <li>
+          III(2)では物体が床に対して加速度を持っています。このような系で無理やり我々の知っているニュートン力学をするために、<strong>慣性力</strong>という道具があるのでした。
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>解説</h2>
+
+      <span>I-(1)</span><!-- 目立たせる！ -->
+      <div><h3>力の図示</h3>
+        <p>
+          まずは、かかる力を全て図示しましょう。
+        </p>
+        <img src="./img/tokyo2025_1_1.png" alt="力の図示" style="max-width: 20rem; margin: auto;">
+        <details class="dasoku">
+          <summary>「あれ？」と思った人への補足</summary>
+          <ul class="list">
+            <li>
+              右向きの力 $F$ が おもりC に直接かかっているように描いていますが、実際には力は糸の先端にかかり、その反作用で〜〜〜
+            </li>
+            <li>
+              同様に、おもりCとAをつなぐ棒の両端にも色々と力がかかっていますが、結局全体で見たら打ち消すので本質的ではありません。
+            </li>
+          </ul>
+          <p>[参考] <a href="" class="blocklink">全ての力を書き出すのは意外に難しい話</a></p>
+        </details>
+        <p>
+          すでにわかっている・与えられている力は、3つの小球にかかる重力（それぞれ $mg$ ）と、糸を引っ張る力 $F$ です。
+        </p>
+        <p>
+          一方、未知の力はおもりA,Bが床から受ける垂直抗力（$N_A, N_B$ とおく）、おもりAが床に固定されて受ける水平方向の垂直抗力（$R$ とおく）です。「剛体が静止している」などの条件から、これらを求めていきます。
+        </p>
       </div>
 
+
+    
+
+      <div><h3>条件の定式化</h3>
+        <p>
+          問題文には $F$ を徐々に大きくしていくと、ある大きさ（$F_0$とします）に達したときにおもりBが床から離れた、とあるので、まずは $F$ が $F_0$ に達するまでの、<strong>物体が止まっている（並進も回転もしていない）</strong>間の条件を考えます。
+        </p>
+        <p>
+          $ F < F_0$ の間、垂直抗力 $N_A$ は $F$ の値に応じて都合よく働きますが、<a class="link link-q" style="text-decoration: underline;">これが $0$ になってしまった瞬間、釣り合いが破れ、おもりBは浮いてしまします [？]</a>。
+          <!-- ◯内に?のアイコン。補足情報のポップアップ -->
+          <br>
+          <button class="" onclick="document.querySelector('#hosoku_1').classList.toggle('open')">
+            [補足]「垂直抗力が0になった瞬間浮き上がる」ことについて
+          </button>
+        </p>
+
+        <!-- hosokuのwrapper -->
+        <aside class="hosoku" id="hosoku_1">
+          <div class="hosoku_content">
+            <button onclick="document.querySelector('#hosoku_1').classList.toggle('open')">× CLOSE</button>
+            <h4>[補足] 「垂直抗力が0になった瞬間浮き上がる」ことについて</h4>
+          </div>
+        </aside>
+
+        <p>
+          <span style="color: pink;">思考の道すじ</span>でも触れたように、「物体が静止している」という条件は
+          <ul class="list">
+            <li>物体が並進していない</li>
+            <li>物体が回転していない</li>
+          </ul>
+          の二つに分解できます。
+        </p>
+        <p>
+          <strong>並進しない条件</strong>は、力の釣り合いにより
+          $$
+            \left\{ \,
+              \begin{aligned}
+                N_A + N_B &= 3mg \\
+                R &= F.
+              \end{aligned}
+            \right.
+          $$
+        </p>
+        <p>
+          <strong>回転しない条件</strong>はモーメント（距離×力）の釣り合いで書けます。どの点の周りのモーメントを考えてもいいのですが、<a class="link">ここでは おもりA を中心に考えると [?]</a>、
+          $$
+            dF + dN_B = dmg
+          $$
+          すなわち
+          $$
+            N_B = mg - F
+          $$
+          ここからまた、$N_A$も
+          $$
+            N_A = 2mg + F
+          $$
+          とわかります。
+          <a class="link">[補足] 本当にこれで十分か？</a>
+        </p>
+      </div>
       <div>
-        <!-- 1-I-(1)(2)(3) -->
-        <div>
-          <!-- 問題画像 -->
-          <img src="" alt="">
-        </div>
-        <div>
-          <!-- 解説 -->
-          <p>
-            ああああ〜〜〜〜
-          </p>
-        </div>
+        <p>
+          以上の考察により、おもりB が浮くのは Bの垂直抗力 $N_B$ が $0$ になるときですから、
+          $$
+            0 = N_B = mg-F
+          $$
+          を解いて、
+          $$
+            \bm{F = mg} \; (=F_0) \; \cdots \; \text{I-(1)}
+          $$
+          ◼︎
+        </p>
       </div>
 
+      <hr>
+
+      <div><h3>I-(2)</h3>
+        <p>
+          糸を引いて物体を傾けていった時、倒れてしまうのは、おもりB,Cを結ぶ棒がちょうど床と平行になったときでしょう。これ以上右に傾くと、釣り合いが破れて一気に右に倒れてしまいます。この時までに力がした仕事を求めましょう。
+        </p>
+        <img src="" alt="倒れる瞬間の物体">
+        <p>
+          <strong>仕事</strong>とはそもそも（物体が動いた方向への）力×距離の寄せ集め（=積分）で、移動中の物体への力のかかり方によって決まります。しかし困ったことに今回私たちは、物体が倒れるまでの力 $F$ の変化など知りません。それどころか、力 $F$ のかけ方は何通りでも存在してしまいます。
+        </p>
+        <div class="dasoku">
+          例えば一定の力で引き続けるのか（これにも大きさの大小色々ある）、最初は大きい力でぐいっと引いて、後から弱めるのか、etc...
+        </div>
+        <p>
+          仕事の定義に従って直接は求められない。では、どうするか。ここで活躍するのが <strong>エネルギー保存則</strong> です。
+        </p>
+        <p>
+          一般に何かの物理的変化をする前と後で変わらない量があるとき、それを <strong>保存量</strong> といい、途中経過を追跡せず<strong>変化のはじめと終わりの状態だけ知りたいとき</strong>重宝します。
+        </p>
+        <p>
+          今回であれば、物体が倒れる瞬間までの $F$ の変化は不明ですが、物体が持つ始点と終点での<strong>位置エネルギー</strong>は計算できます。すなわち、床を位置エネルギーの基準として、最初の位置エネルギーは $mgd$ （おもりCによる）、倒れる瞬間の位置エネルギーは
+          $$
+            2\times mg \frac{d}{\sqrt{2}} = \sqrt{2}mgd
+          $$
+          なので、力 $F$ がした仕事 $W_0$ はこの差
+          $$
+            W_0 = \sqrt{2}mgd - mgd = \bm{(\sqrt{2}-1)mgd}
+          $$
+          として求められます。◼︎
+        </p>
+      </div>
+
+      <hr>
+
+      <h2>II</h2>
+      <div><h3>置き換えて考えよう</h3>
+        <p>
+          おもりAが床に固定されていなくても、摩擦力により物体が静止している間は、<strong>Iの $\bm{R}$ を おもりBが床から受ける摩擦力だと思う</strong> ことで全く同様に考えられます。
+        </p>
+        <div class="dasoku">
+          このように、一見異なる状況設定でも、見方を変える・別のものを代入することで、すでに考察した結果を使いまわせることは重要です。<a href="" class="link">[参考] ミカタを変えれば同じこと</a>
+        </div>
+        <p>
+          ただし、これが成立して物体が静止できるのには、条件があります。なんでしょうか？
+        </p>
+        <p>
+          そう、<strong>静止摩擦力 $\bm{R}$ が最大摩擦力を超えないこと</strong>、すなわち
+          $$
+            R \leq \mu N_B
+          $$
+          であることです。これに注意して解き進めていきます。
+        </p>
+      </div>
+      <div><h3>II-(1)(2)</h3>
+        <p>
+          (1)(2)は、Iですでに求めています：
+          $$
+            \begin{aligned}
+              N_B &= mg-F \\
+              N_A &= 2mg + F
+            \end{aligned}
+          $$
+        </p>
+      </div>
+      <div><h3>II-(3)</h3>
+        <p>
+          物体が滑り出すのは、<strong>静止摩擦力 $\bm{R}$ が最大摩擦力を超え</strong> て力の釣り合いが破れる瞬間：
+          $$
+              \begin{aligned}
+                F &= R = \mu N_B = \mu (mg-F) \\
+              \end{aligned}
+          $$
+          です。両辺にFが入っているので、うっかりこのまま右辺を回答してしまわぬよう気をつけましょう。
+        </p>
+        <p>
+          これを
+          $$
+            \frac{1}{\mu} F = mg-F \\
+            F\left(1 + \frac{1}{\mu}\right) = mg
+          $$
+          と解いて、
+          $$
+            \bm{F = \frac{mg}{1+\dfrac{1}{\mu}}}
+          $$
+          ◼︎
+        </p>
+        <div class="dasoku">
+          <p>
+            解答上はこれで問題ないのですが、ここで2つのことを気にかけて欲しいのです。それは、
+            <li>① 条件 $\mu < \dfrac{1}{3}$ の意味</li>
+            そして、
+            <li>$F < \dfrac{mg}{1+\dfrac{1}{\mu}}$のとき、本当に物体は滑り出さないのか（ $R < \mu N_B$ が成立するか）</li>
+            です。
+          </p>
+        </div>
+        <details class="dasoku">
+          <summary>[検証] 条件 $\mu < \dfrac{1}{3}$ の意味 ── Bは本当に浮かないのか？</summary>
+          <p>
+            あああああ
+          </p>
+        </details>
+      </div>
     </section>
 
     <section>
@@ -92,10 +295,6 @@
 
     <section class="title-section">
       <h1>東京大学 2025 第2問</h1>
-    </section>
-
-    <section>
-      <h2>所感</h2>
       <p>
         I-(2)は見慣れないかもしれませんが少し考察すれば見当がつく問題です。IIのグラフを選ぶ問題とIIIはやや難ですが、IIの方は得点しておきたいところです。全体を通して磁束線の理解が問われている印象でした。ビオ・サヴァールの法則は必須ではありませんが、知っておくとIの(2)で自信をもって解答できるでしょう。また、電磁気の特に電磁誘導が絡むような問題では符号に特段の注意が必要です。
       </p>
@@ -121,7 +320,7 @@
           <p>
             こうしてみるとわかるように、原点に対して点対称な位置を流れる電流が作る磁束密度ベクトルは等しくなります。よってソレノイドコイルを切断すると磁束密度の大きさも半分になるというわけです。なお、磁束密度ベクトルの向きはビオ・サヴァールの法則より電流の流れる向きのベクトルから原点までの位置ベクトルに向かって右ねじを回す向きになります。
           </p>
-          <details>
+          <details class="dasoku">
             <summary>ビオ・サヴァールの法則について</summary>
             <p>
               ビオ・サヴァールの法則は以下のように表されます。$$\mathrm{d}\bm{B} = \frac{\mu_0}{4\pi}\frac{I\mathrm{d}\bm{s}\times\bm{r}}{r^3}$$ただしここで$\mathrm{d}\bm{s}$は電流が流れる向きの微小線素ベクトル、そして$\times$は外積を表します。両辺を適切な領域で積分することにより$\bm{B}$を求めることができます。通常これを愚直に積分することはせず、対称性を考慮してベクトル量をスカラー量に変換して積分します。
@@ -142,7 +341,7 @@
           <p>
             ファラデーの電磁誘導の法則より誘導起電力$V$は磁束${\Phi}$を用いて$-\dfrac{\mathrm{d}\Phi}{\mathrm{d}t}$と求められるのでした。多くの高校物理の教科書においては誘電起電力の"大きさ"を$\left|\dfrac{\mathrm{d}\Phi}{\mathrm{d}t}\right|$と記載していますが、符号を含めて理解しておきましょう。本問では流れる電流の大きさを問われているので$I_B=\dfrac{1}{R}\left|\dfrac{\Delta\Phi}{\Delta t}\right|$となります。また、レンツの法則から電流の流れる向きは左から見て時計回りになります。
           </p>
-          <details>
+          <details class="dasoku">
             <summary>レンツの法則と電磁誘導の式の関係</summary>
             <p>
               ファラデーの電磁誘導の法則には負号がついており、これはレンツの法則の顕れであるといわれています。高校物理においては、誘導起電力に絶対値をつけて大きさのみを情報として取り出し、その向きについてはレンツの法則を用いて判断することになっています。しかし、ファラデーの電磁誘導の式はもともと電流の流れる向きに関する情報も持っているのですから、レンツの法則に頼ることなく数式の上で電流の向きを決定できるはずです。しかしこれはマクスウェル方程式やベクトル解析を必要とするため高校で扱うことはありません。
@@ -168,7 +367,7 @@
           <p>
             抵抗値を変えた時に力の大きさがどのように変化するかという問題です。まずは力$F$の表式を考えましょう。前問で触れたように力は２通りの方法で考えることができます。直線電流における磁束密度の定義式：$\bm{F} = \bm{I}\times\bm{B}l$を用いる方法と、ローレンツ力：$\bm{F} = q\bm{v}\times\bm{B}$を用いる方法です。
           </p>
-          <details>
+          <details class="dasoku">
             <summary>磁束密度の定義式について</summary>
             <p>
               磁束密度の定義式は一般には以下のようになります。$$\mathrm{d}\bm{F} = I\mathrm{d}\bm{s}\times\bm{B}$$ここで$\mathrm{d}\bm{s}$ベクトルはある位置において電流の流れる向きを向いた微小線素ベクトルです。両辺を適切な領域で積分することによって$\bm{F}$を得ます。もし電流が直線電流であるならば$\bm{F} = \bm{I}\times\bm{B}l$となります。

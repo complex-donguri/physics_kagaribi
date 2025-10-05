@@ -709,3 +709,40 @@ strong::after {
 
 }
 /* #endregion */
+
+
+
+
+
+/* ------------- 251005- */
+
+
+.hosoku {
+  /* background-color: #440a00e6; */
+  background-color: #000000cc;
+  /* display: block;
+  width: 100vh;
+  height: 100vw; */
+
+  padding: 2rem;
+
+  position: fixed;
+  inset: 100% 0% -100% 0%;
+  z-index: 100;
+  /* background-color: #4e483ae6; */
+
+  transition: transform 0.3s;
+}
+.hosoku.open {
+  transform: translate(0, -100%);
+
+  overflow: hidden;
+}
+
+.hosoku_content {
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #440a00cc;
+}
