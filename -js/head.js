@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
       {left: "$", right: "$", display: false},
     ],
     macros: {
-      "\\Rbb": "\\mathbb{R}",
+      "\\CC": "\\mathbb{C}",
+      "\\RR": "\\mathbb{R}",
+      "\\ZZ": "\\mathbb{Z}",
+      "\\NN": "\\mathbb{N}",
+      "\\KK": "\\mathbb{K}",
+      "\\FF": "\\mathbb{F}",
       "\\ie": "\\mathrm{i.e.}",
     }
   });
