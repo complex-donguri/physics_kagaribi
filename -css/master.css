@@ -48,9 +48,10 @@ h1, h2, h3, h4, h5, h6, p, pre, figure, ul, dl {
   margin: 0;
   padding: 0;
 }
-ul {
+/* ulの黒丸はリセットしない */
+/* ul {
   list-style: none;
-}
+} */
 p {
   line-height: 1.8;
   margin: 1rem 0;
